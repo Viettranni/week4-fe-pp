@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Title from './Title'
 
 const Registration = () => {
 
@@ -21,8 +22,9 @@ const Registration = () => {
     };
 
     return (
-        <div className="registration-form" >
-            <h2>Register</h2>
+        <section className='section registration' id='registration'>
+            <Title title='Registration' subTitle='Form' />
+            <div className="registration-form">
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="name">Name:</label>
@@ -56,9 +58,13 @@ const Registration = () => {
                         required
                         />
                     </div>
-                    <button type="submit">Register</button>
-            </form>
-        </div>
+                    <div>
+                        <label></label>
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     );
   };
 
