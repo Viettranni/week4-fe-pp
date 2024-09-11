@@ -5,10 +5,12 @@ import Service from './Service'
 
 const Services = () => {
   const [servicesData, setServicesData] = useState(services);
+
   const handleDeleteService = (serviceId) => {
     // Filter out the item with the specified ID and update the state
     const updatedServices = servicesData.filter((service) => service.id !== serviceId);
     setServicesData(updatedServices);
+    
   };
   return (
     <section className='section services' id='services'>
