@@ -18,7 +18,7 @@ const Services = () => {
         {servicesData.map((service) => {
           return <Service
                     key={service.id}
-                    item={service}
+                    {...service}
                     onDelete={handleDeleteService}
                  />
         })}
